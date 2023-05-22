@@ -1,15 +1,21 @@
+import useLoginModal from "@/hooks/useLoginModal"
 import { useRouter } from "next/router"
+import { useCallback } from "react"
 import {FaFeather} from 'react-icons/fa'
 
 const SidebarTweetButton = () => {
     const router = useRouter()
+    const loginModal = useLoginModal()
 
-    function generateRandomNumber(min: number, max: number) {
-        return Math.floor(Math.random() * (max - min) + min);
-    }
-
+    const onCLick = useCallback(
+      () => {
+        loginModal.onOpen()
+      },
+      [loginModal],
+    )
+    
   return (
-    <div onClick={() => router.push('/')}>
+    <div onClick={onCLick}>
         <div className="
             p-4 
             flex

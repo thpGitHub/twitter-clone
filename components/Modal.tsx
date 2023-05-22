@@ -103,13 +103,8 @@ const Modal = ({isOpen, onClose, onSubmit, title, body, footer, actionLabel, dis
             </div>
             {/*footer*/}
             <div className="flex flex-col gap-2 p-10">
-              <Button 
-                disabled
-                label={actionLabel}
-                secondary 
-                fullWidth 
-                large 
-                onClick={handleSubmit} />
+              <Button disabled label={actionLabel} secondary fullWidth large onClick={handleSubmit} />
+              {footer}  
             </div>
           </div>
         </div>
