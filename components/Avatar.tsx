@@ -6,7 +6,7 @@ type AvatarProps = {
 
 const Avatar = ({ userId, isLarge, hasBorder }: AvatarProps) => {
     return (
-        <div></div>
+        <div>{userId}</div>
     )
 }
 
